@@ -1,0 +1,258 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+  overflow: hidden;             /* scroll bar nai aaega */
+}
+
+.main {
+    display: flex;
+    height: 100vh;              /* 100 percent of viewport height- the part jo site p dikhta hai */
+    padding: 0.5rem;
+}
+
+.sidebar {
+    color: white;
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;        /* 1rem = 16px */
+    margin-right: 0.5rem;
+}
+
+.main_content {
+    color: white;
+    background-color: #121212;
+    flex: 1;                     /* isko saari jagah dedo..jitni baki divs k baad bachi hai */
+    border-radius: 1rem; 
+    overflow: auto;              /*  yaha chahiye scroll bar */
+
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music_player {
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    height: 80px;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    margin-top: 1rem;
+    
+}
+
+.nav_option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav_option:hover {
+    opacity: 1;
+}
+
+.nav_option i{
+    font-size: 1.25rem;
+}
+.nav_option a{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib_option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 1rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1.25rem;
+}
+.box_p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.box_p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark_badge{
+    background-color: black;
+    color: white;
+}
+.podcast{
+    height: 11rem;
+}
+
+.sticky_nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+.sticky_nav_icons{
+    margin-left: 0.75rem;
+}
+.sticky_nav_options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav_item{
+    margin-right: 1rem;
+}
+
+@media (max-width:1000px) {
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+}
+.card_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card_image{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card_title{
+    font-weight: 600;
+}
+.card_info{
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+.footer{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music_player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+controls{
+    width: 25%;
+}
+.player_control_icon{
+    height: 1rem;   
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player_controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.player_control_icon:hover{
+    opacity: 1;
+}
+.playback_bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress_bar{
+    width: 75%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.progress_bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.3rem;
+}
+.progress_bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
